@@ -573,6 +573,7 @@ var BasicExtension = (function (_super) {
      * @return {?}
      */
     function () {
+        'use strict';
         var _this = this;
         this.events.forEach(function (eventName) {
             var /** @type {?} */ obs = fromEvent(_this.viewer, eventName).map(function (args) { return _this.castArgs(args); });

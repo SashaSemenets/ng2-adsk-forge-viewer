@@ -554,7 +554,7 @@ var BasicExtension = (function (_super) {
     /**
      * @param {?} extensionName
      * @param {?} callback
-     * @return {?}
+     * @return {?} 
      */
     BasicExtension.registerExtension = /**
      * @param {?} extensionName

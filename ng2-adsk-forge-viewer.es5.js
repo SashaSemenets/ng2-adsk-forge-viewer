@@ -1,9 +1,7 @@
 import { merge, fromEvent, Subject } from 'rxjs';
-import { map, takeUntil } from 'rxjs/operators';
 import { ChangeDetectionStrategy, Component, EventEmitter, Injectable, Input, NgModule, Output } from '@angular/core';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { DomSanitizer } from '@angular/platform-browser';
-'use strict';
 
 var __extends = (undefined && undefined.__extends) || (function () {
     var extendStatics = Object.setPrototypeOf ||
@@ -576,7 +574,7 @@ var BasicExtension = (function (_super) {
     function () {
         var _this = this;
         this.events.forEach(function (eventName) {
-            var /** @type {?} */ obs = fromEvent(_this.viewer, eventName).map(function (args) { return _this.castArgs(args); });
+            var /** @type {?} */ obs = (fromEvent(_this.viewer, eventName)).map(function (args) { return _this.castArgs(args); });
             _this.eventStreams.push(obs);
         });
         this.viewerEvents = merge.apply(void 0, this.eventStreams);
